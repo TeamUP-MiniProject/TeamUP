@@ -3,7 +3,7 @@ const express = require('express');
 const router = express.Router();
 
 router.get('/add-hobby', (req, res, next) => {
-    res.send('<form action="/group-it/add-hobby" method="POST"><input type="text"  name="hobby_name"> <button type="submit"></button></input> </form>');
+    res.send('<form action="/admin/group-it/add-hobby" method="POST"><input type="text"  name="hobby_name"> <button type="submit"></button></input> </form>');
 });
 
 router.post('/group-it/add-hoby', (req, res, next) => {
