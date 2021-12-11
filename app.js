@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const bodyParser = require('body-parser');
 
 const groupRoutes = require('./routes/group-it.js');
@@ -16,12 +17,13 @@ app.get or app.post is used to handle the request get/post accordingly.
 */
 
 // app.use gets a function with args (req, res, next) and execute the middleware for the request
-// in-order
+// in-order 
 
 app.use('/admin', adminRoutes); // Using the routes defined in the routes/admin.js by order - the order matters
 app.use(groupRoutes); // Using the routes defined in the routes/group-it.js by order - the order matters
 
-app.use ((req,res,next) => {
-    res.status(404).send("<h1>404 Error - Page Not Found</h1>");
+app.use((req, res, next) => {
+    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
 });
+
 app.listen(3000);
