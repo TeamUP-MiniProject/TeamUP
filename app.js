@@ -2,6 +2,8 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 
+const rootDir = require('./util/path.js');
+
 const groupRoutes = require('./routes/group-it.js');
 const adminRoutes = require('./routes/admin.js');
 
@@ -20,10 +22,10 @@ app.get or app.post is used to handle the request get/post accordingly.
 // in-order 
 
 app.use('/admin', adminRoutes); // Using the routes defined in the routes/admin.js by order - the order matters
-app.use(groupRoutes); // Using the routes defined in the routes/group-it.js by order - the order matters
+app.use('/', groupRoutes); // Using the routes defined in the routes/group-it.js by order - the order matters
 
 app.use((req, res, next) => {
-    res.status(404).sendFile(path.join(__dirname, 'views', '404.html'));
+    res.status(404).sendFile(path.join(rootDir, 'views', '404.html'));
 });
 
 app.listen(3000);
