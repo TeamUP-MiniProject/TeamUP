@@ -1,0 +1,27 @@
+{
+  "name": "group-it",
+  "version": "1.0.0",
+  "description": "a Web App for joint activities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GroupIT-MiniProject/GroupIT.git"
+  },
+  "author": "Ron Tsabary, Chen Shein, Yotam Lifschytz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GroupIT-MiniProject/GroupIT/issues"
+  },
+  "homepage": "https://github.com/GroupIT-MiniProject/GroupIT#readme",
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.1",
+    "express": "^4.17.1"
+  }
+}
