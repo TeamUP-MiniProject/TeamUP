@@ -1,16 +1,12 @@
 const express = require('express');
+const hobbiesControllers = require('../controllers/hobbies');
 
 const rootDir = require('../util/path');
 const router = express.Router();
 
-router.get('/add-hobby', (req, res, next) => {
-    res.send('<form action="/admin/group-it/add-hobby" method="POST"><input type="text"  name="hobby_name"> <button type="submit"></button></input> </form>');
-});
+router.get('/add-hobby', hobbiesControllers.getAddHobby);
 
-router.post('/group-it/add-hoby', (req, res, next) => {
-    console.log(req.body);
-    res.send('<h1>Hobby Added</h1>');
-});
+router.post('/group-it/add-hoby', hobbiesControllers.postAddHobby);
 
 module.exports = router; /*
 If there is a need to export some more stuff the syntax is the following:

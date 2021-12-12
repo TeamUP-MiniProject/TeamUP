@@ -14,9 +14,9 @@ router.get( (req, res, next) => {
     /*
     if we decide to work with the .pug files using the template engine 
     then we should not send HTML files but render the pug files like so:
-    res.render('register-user.pug');
+    res.render('register-user.pug', data-for-the-template);
     or
-    res.render('register-user') - the .pug extension is optional
+    res.render('register-user', data-for-the-template) - the .pug extension is optional
     */ 
 });
 

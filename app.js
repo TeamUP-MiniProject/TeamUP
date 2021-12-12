@@ -11,6 +11,11 @@ const app = express();
 
 
 /* If decided to use a template engine e.g. pug then these lines should be uncommented
+if using Handlebars or EJS
+any engine should be installed using npm install e.g. npm install ejs
+const expressHbs = require('express-handlebars');
+app.engine('handlebars', expressHbs);
+
 app.set('view engine', 'pug');
 app.set('views', 'views'); - this is optional because our views-folder is already named views
 */
