@@ -11,6 +11,13 @@ router.get('register-user' , (req,res,next) => {
 
 router.get( (req, res, next) => {
     res.sendFile(path.join(rootDir, 'views', 'group-it-home.html'));
+    /*
+    if we decide to work with the .pug files using the template engine 
+    then we should not send HTML files but render the pug files like so:
+    res.render('register-user.pug');
+    or
+    res.render('register-user') - the .pug extension is optional
+    */ 
 });
 
 

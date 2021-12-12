@@ -9,6 +9,11 @@ const adminRoutes = require('./routes/admin.js');
 
 const app = express();
 
+
+/* If decided to use a template engine e.g. pug then these lines should be uncommented
+app.set('view engine', 'pug');
+app.set('views', 'views'); - this is optional because our views-folder is already named views
+*/
 // building a body parser for each request 
 // this body-parser is for parsing the body of the request using form and buttons, files 
 // will be needed a different parser.
