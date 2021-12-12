@@ -27,5 +27,5 @@ app.use('/', groupRoutes); // Using the routes defined in the routes/group-it.js
 app.use((req, res, next) => {
     res.status(404).sendFile(path.join(rootDir, 'views', '404.html'));
 });
-
+// I am trying to edit in order to push trough VS-code
 app.listen(3000);
