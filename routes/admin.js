@@ -12,4 +12,12 @@ router.post('/group-it/add-hoby', (req, res, next) => {
     res.send('<h1>Hobby Added</h1>');
 });
 
-module.exports = router;
+module.exports = router; /*
+If there is a need to export some more stuff the syntax is the following:
+exports.name = name; - for each thing you want to export.
+
+after replacing the line you should also return to app.js and update the line 
+app.use('/admin', adminRoutes);
+to
+app.use('/admin', adminRoutes.router); - like properties of an object
+*/
