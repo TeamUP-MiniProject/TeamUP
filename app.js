@@ -13,6 +13,7 @@ const app = express();
 // this body-parser is for parsing the body of the request using form and buttons, files 
 // will be needed a different parser.
 app.use(bodyParser.urlencoded({ extended: false }));
+app.use(express.static(path.join(__dirname, 'public'))); // Define a static-server folder
 
 /*
 app.get or app.post is used to handle the request get/post accordingly.
