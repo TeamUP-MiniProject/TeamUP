@@ -1,0 +1,110 @@
+
+#myNav {
+    background-color: rgb(17, 88, 97);
+    color: #efefef;
+    height: 60px;
+    margin: 10px 0;
+}
+
+#myNav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.left_bar {
+    float: left;
+}
+
+.main_nav {
+    border-radius:10px 10px 0px 0px;
+    text-align: center;
+    padding: 20px;
+    display: inline-block;
+    background-color: rgb(84, 178, 190);
+    color:rgb(4, 55, 61);
+    width: 100px;
+    position: relative;
+    text-decoration: none;
+    border: 1px solid rgb(4, 55, 61);
+ 
+}
+
+.right_bar{
+    float: right;
+    padding: 10px 0px 0px 0px;
+    margin: 1px;
+
+}
+.profile{
+    float: right;
+}
+
+.registration{
+    border-radius:30px 30px 30px 30px;
+    text-align: center;
+    padding: 10px ;
+    display: inline-block;
+    background-color: rgb(241, 58, 52);
+    color:#fff;
+    width: 100px;
+    position: relative;
+    text-decoration: none;
+    border: 1px solid rgb(4, 55, 61);
+    
+}
+.forms{
+    padding-top: 20px;
+    display: inline-block;
+    text-align: right;
+    
+}
+
+.submion{
+    text-align: center;
+}
+
+#myNav ul li a:hover {
+    background-color: rgb(13, 83, 77);
+    color: #fff;
+}
+
+
+#logo{
+    border-radius:50px;
+    float: left;
+    height: 60px;
+    width: 60px;
+    
+}
+.profile_photo{
+    float: right;
+    height: 58px;
+    width: 58px;
+    border: 1px solid rgb(4, 55, 61);
+    
+}
+
+.icons{
+    border-radius:50px;
+    height: 200px;
+    width: 200px;
+    display: inline-block;
+}
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+    float: left;
+    width: 30%;
+  }
+  
+  /* Clear floats after image containers */
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+body{
+    background-color: rgb(192, 248, 245);
+    text-align: center;
+}
