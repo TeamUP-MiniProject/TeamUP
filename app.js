@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
-
+// We rule
 const rootDir = require('./util/path.js');
 
 const groupRoutes = require('./routes/group-it.js');
