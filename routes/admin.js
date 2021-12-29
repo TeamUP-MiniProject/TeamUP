@@ -4,9 +4,9 @@ const hobbiesControllers = require('../controllers/hobbies');
 const rootDir = require('../util/path');
 const router = express.Router();
 
-router.get('/add-hobby', hobbiesControllers.getAddHobby);
+//router.get('/add-hobby', hobbiesControllers.getAddHobby);
 
-router.post('/group-it/add-hoby', hobbiesControllers.postAddHobby);
+//router.post('/group-it/add-hobby', hobbiesControllers.postAddHobby);
 
 module.exports = router; /*
 If there is a need to export some more stuff the syntax is the following:
