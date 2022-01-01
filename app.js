@@ -39,7 +39,6 @@ app.get or app.post is used to handle the request get/post accordingly.
 app.use('/', authRoutes);
 app.use('/', groupRoutes); // Using the routes defined in the routes/group-it.js by order - the order matters
 sequelize.sync().then(result =>{
-    console.log(result);
     app.listen(3000);
 }).catch ( err => {
     console.log(err);
