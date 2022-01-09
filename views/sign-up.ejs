@@ -1,40 +1,31 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Registration</title>
-        <link rel="stylesheet" href="/css/style.css">
-    </head>
+<%- include('includes/head.ejs') %>
+
     <body>
-        <header>
-            <img src="/images/logo.png" id="logo"/>
-            <nav id="myNav">
-                <ul >
-                    <li class="left_bar" ><a href="/" class="main_nav">Interests</a></li>
-                    <li class="left_bar"><a href="/my-interests" class="main_nav">My Interests</a></li>
-                    <li class="profile"><a href="/profile" ><img src="https://loremflickr.com/320/240/dog" class="profile_photo"/></a></li>
-                    <li class="right_bar"><a href="/login" class="registration">Log in</a></li>
-                    <li class="right_bar"><a href="/sign-up" class="registration">Sign up</a></li>
-                </ul>
-            </nav>
-        </header>
         <form >
-            <div class="forms">
-                E-mail: <input type="email" name="mail" ><br>
+            <h1 class="title"> welcome to TeamUp</h1>
+            <form class="forms" action="????" method="POST">
+                <label for="mail">E-mail</label>
+                <input type="email" name="mail">
                 <br>
-                Name: <input type="text" name="name" ><br>
+                <button class="btn" type="submit">Log in</button>
+                <label for="user-name">Name</label>
+                <input type="text" name="user-name">
                 <br>
-                Age: <input type="Age" name="age" ><br>
-                <br>    
-                Password: <input type="password" name="my_password" ><br>
+                <label for="user-age">Age</label>
+                <input type="Age" name="user-age">
                 <br>
-                Password validation: <input type="password" name="password_validation" ><br>
+                <label for="password">Password</label>    
+                <input type="password" name="password">
+                <br>
+                <label for="password-validation">Password validation</label>    
+                <input type="password" name="password-validation">
                 <br>
             </div>
             <div class="submion">
-                profile Picture: <input type="image" name="profile_pic" ><br>
+                <label for="profile_pic">Profile Picture</label>
+                <input type="image" name="profile_pic" ><br>
                 <br>    
-                <input type="submit" value="go" >
+                <a href="index.html"><input type="submit" value="go"></a>
             </div>
         </form>
     </body>

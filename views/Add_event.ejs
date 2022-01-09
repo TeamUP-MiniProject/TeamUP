@@ -1,0 +1,28 @@
+<%- include('views\includes\head.ejs') %>
+    <body>
+        <%- include('views\includes\nav.ejs') %>
+                    <li class="left_bar" class="<%= path === 'C:\Users\Chen\Desktop\groopIt\GroupIT\views\feed.ejs' ? 'active' : '' %>"><a href="/Add_event.ejs" class="main_nav">new event</a></li>
+                    <li class="profile"><img src="<%= user.Profile_pic_url %>" class="profile_photo"/></li>
+                </ul>
+            </nav>
+        </header>
+        <h1 class="title"> Add your event</h1>
+        <form class="forms" action="????" method="POST" >
+            <label for="eventName">Event title</label>
+            <input type="text" name="eventName">
+            <br>
+            <label for="eventLocation">The event Location</label>    
+            <input type="text" name="eventLocation">
+            <br>
+            <label for="eventDescription">The event Description</label>    
+            <input type="text" name="eventDescription">
+            <br>
+            <label for="numberfPlayers">The number of participants</label>    
+            <input type="number" name="numberfPlayers">
+            <br>
+            <div class="submion">
+                <a href="index.html"><button class="btn" type="submit">Create new event</button></a> 
+            </div>
+        </form>
+    </body>
+</html>
