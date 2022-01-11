@@ -37,7 +37,3 @@ app.use('/', authRoutes);
 app.use('/', groupRoutes); // Using the routes defined in the routes/group-it.js by order - the order matters
 
 // Connect to MongoDB
-mongoConnect(() => {
-    console.log(client);
-    app.listen(3000);
-});
