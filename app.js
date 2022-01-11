@@ -2,10 +2,7 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 const ejs = require('ejs')
-const Sequelize = require('sequelize');
-const sequelize = require('./util/database');
-const groupRoutes = require('./routes/group-it.js');
-const authRoutes = require('./routes/auth.js');
+const mongoConnect = require('./util/database')
 
 
 const app = express();
@@ -38,9 +35,9 @@ app.get or app.post is used to handle the request get/post accordingly.
 //app.use('/admin', adminx§Routes); // Using the routes defined in the routes/admin.js by order - the order matters
 app.use('/', authRoutes);
 app.use('/', groupRoutes); // Using the routes defined in the routes/group-it.js by order - the order matters
-sequelize.sync().then(result =>{
+
+// Connect to MongoDB
+mongoConnect(() => {
+    console.log(client);
     app.listen(3000);
-}).catch ( err => {
-    console.log(err);
-    console.log("Hello");
 });
