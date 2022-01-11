@@ -1,0 +1,50 @@
+<%- include('views\includes\head.ejs') %>
+    <body>
+        <%- include('views\includes\nav.ejs') %>
+                    <li class="left_bar" class="<%= path === 'C:\Users\Chen\Desktop\groopIt\GroupIT\views\feed.ejs' ? 'active' : '' %>"></li>><a href="\" class="main_nav">Feed</a></li>
+                    <li class="profile"><img src="<%= user.Profile_pic_url %>" class="profile_photo"/></li>
+                    <li class="right_bar"><a href="Add_event.ejs" class="registration">Add event</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+                <div class="grid">
+                    <% for (let event of feed) { %>
+                        <article class="event__content">
+                            <h2 class="event__title">
+                                <%= event.title %>
+                            </h2>
+                            <br>
+                            <h1 class="event__price">
+                                <%= event.time %>
+                            </h1>
+                            <br>
+                            <h1 class="event__price">
+                                <%= event.location %>
+                            </h1>
+                            <br>
+                            <p class="event__description">
+                                <%= event.description %>
+                            </p>
+                            <br>
+                            <div class="mem_table">
+                                <% for (let Profile_url of event.partcipant) { %>
+                                <div >
+                                    <img src="<%= Profile_url %>" class="members">
+                                </div>
+                                <br>
+                                <% } %>
+                            </div>
+                            <br><br><br>
+                            <div >
+                                <a href="feed.html" class="Join-event">Join</a>
+                            </div>
+                        </article>
+                    <% } %>
+                </div>
+                <% } else { %>
+                    <h1>No events were Found!</h1>
+                <% } %>
+        </main>
+    </body>
+</html>

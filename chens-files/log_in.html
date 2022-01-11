@@ -2,28 +2,26 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Regidtrate</title>
-        <link rel="stylesheet" href="../public/css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Page-Title</title>
+        <link rel="stylesheet" href="style.css">
     </head>
+
     <body>
-        <header>
-            <img src="logo.png" id="logo"/>
-            <nav id="myNav">
-                <ul >
-                    <li class="left_bar" ><a href="/" class="main_nav">Interests</a></li>
-                    <li class="left_bar"><a href="/my-interests" class="main_nav">My Interests</a></li>
-                    <li class="profile"><a href="/profile" ><img src="https://loremflickr.com/320/240/dog" class="profile_photo"/></a></li>
-                    <li class="right_bar"><a href="/login" class="registration">Log in</a></li>
-                    <li class="right_bar"><a href="/sign-up" class="registration">Sing up</a></li>
-                </ul>
-            </nav>
-        </header>
-        <form class="forms">
-            E-mail: <input type="text" name="mail"><br>
-            <br>    
-            password: <input type="password" name="password"><br>
-            <br>    
-            <input type="submit" value="go">
+        <h1 class="title"> welcome to groopIt</h1>
+        <form class="forms" >
+            <label for="mail">E-mail</label>
+            <input type="email" name="mail">
+            <br>
+            <label for="password">Password</label>    
+            <input type="password" name="password">
+            <br>
+            <div class="submion">
+                <button class="btn" type="submit">Log in</button>
+            </div>
         </form>
+        <div >
+            <a href="sing_up.html" class="new_account">Create new account</a>
+        </div>
     </body>
 </html>
